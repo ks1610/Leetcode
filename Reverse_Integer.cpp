@@ -1,7 +1,10 @@
+#include <bits/stdc++.h>
+#include <unordered_map> 
+
 class Solution {
 public:
     int reverse(int x) {
-        long digit = 0;
+        int digit = 0;
         while(x){
             digit = digit * 10 + (x % 10);
             x/=10;
@@ -12,3 +15,8 @@ public:
         return int(digit);
     }
 };
+
+int main(){
+  Solution a;
+  std::cout << a.reverse(123) << std::endl;
+}
