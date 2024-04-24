@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#include <vector>
 
 struct ListNode {
     int val;
@@ -14,24 +13,29 @@ public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
         ListNode* temp=head;
         int count = 0;
-
+        
+        // Counting the total number of nodes in the linked list
         while(temp!=NULL){
             count++;
             temp = temp->next;
         }
 
+        // If the count equals to n, remove the head node
         if(count==n) return head->next;
 
         ListNode* prev=NULL;
         ListNode* curr=head;
-        
+
         int i=0;
+        // Traverse to the node before the target node to remove
         while(i!=count-n && curr!=NULL)
         {
             i++;
             prev=curr;
             curr=curr->next;
         }
+        
+        //Removing the Target Node
         prev->next=curr->next;
         return head;
 
