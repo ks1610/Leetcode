@@ -14,13 +14,13 @@ public:
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
         ListNode* p1=list1;
         ListNode* p2=list2;
-        ListNode* temp= new ListNode(-1);
+        ListNode* temp= new ListNode(-1); // Dummy node to simplify list construction
         ListNode* p3=temp;
-        
+        //Merging Process
         while(p1!=NULL && p2!=NULL){
             if(p1->val < p2->val){
                 p3->next=p1;
-                p1=p1->next;
+                p1=p1->next; 
             }
             else{
                 p3->next=p2;
@@ -28,7 +28,7 @@ public:
             }
             p3=p3->next;
         }
-
+        //Handling Remaining Nodes
         while(p1!=NULL){
             p3->next=p1;
             p1=p1->next;
@@ -40,7 +40,7 @@ public:
             p2=p2->next;
             p3=p3->next;
         }
-
+        //Finalizing and Returning the Merged List
         return temp->next;
     }
 };
