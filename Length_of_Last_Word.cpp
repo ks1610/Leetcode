@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
 
 class Solution {
 public:
@@ -27,8 +26,8 @@ public:
 
 int main() {
     Solution solution;
-    string input = "Hello World";
+    std::string input = "Hello World";
     int result = solution.lengthOfLastWord(input);
-    cout << "Length of last word: " << result << endl;
+    std::cout << "Length of last word: " << result << std::endl;
     return 0;
 }
