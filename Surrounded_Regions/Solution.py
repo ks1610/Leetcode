@@ -60,6 +60,10 @@ board = [
     ['X', 'O', 'X', 'X']
 ]
 
+# The boared before solving
+for row in board:
+    print(' '.join(row))
+    
 # Create an instance of Solution
 solution = Solution()
 # Solve the board
