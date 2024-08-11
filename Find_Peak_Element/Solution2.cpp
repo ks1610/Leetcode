@@ -1,3 +1,11 @@
+/*
+Runtime: 0ms
+Beats: 100.00%
+
+Memory: 11.70MB
+Beats: 6.55%
+*/
+
 #include <bits/stdc++.h>
 
 class Solution {
