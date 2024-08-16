@@ -6,8 +6,14 @@ class Solution:
         """
         count = 0
         for i in range(32):
+            # Line 8: Check if the i-th bit of n is set to 1
+            # (n >> i) performs a bitwise right shift on n by i bits
+            # & 1 isolates the least significant bit of the shifted result
+            # ((n >> i) & 1) will be 1 if the i-th bit was originally 1, otherwise 0
             if ((n >> i) & 1) == 1:
+                # Line 9: Increment the count if the i-th bit is 1
                 count += 1
+        # Line 10: Return the total count of 1 bits
         return count
 
 def run_test(n, expected, sol):
