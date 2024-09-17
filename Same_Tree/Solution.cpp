@@ -52,6 +52,13 @@ int main(){
     delete tree_2->left;
     delete tree_2->right;
     delete tree_2;
+    delete tree_3->left;
+    delete tree_3->right;
+    delete tree_3;
+    delete tree_4->left;
+    delete tree_4->right;
+    delete tree_4;
+
 
     return 0;
 }
