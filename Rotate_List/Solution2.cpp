@@ -75,7 +75,7 @@ int main() {
 
     // Print the linked list and get the size
     //int size = printList(head);
-    cout << "Sorted linked list: " << printList(head) << endl;
+    cout << "Rotated list: " << printList(head) << endl;
     
     return 0;
 }
