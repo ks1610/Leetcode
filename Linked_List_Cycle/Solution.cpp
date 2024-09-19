@@ -29,26 +29,16 @@ public:
         }
         return false;
     }
-    // Function to get the size of the linked list
-    int printList(ListNode* head) {
-        ListNode* current = head;
-
-        while (current->next != nullptr) {
-            std::cout << current->val << " ";
-            current = current->next;
-        }
-        return current->val;
-    }
-    ListNode* insert_node(ListNode* head, int value){
+    // Function to insert a new node at the end of the linked list
+    ListNode* insert_node(ListNode* head, int value) {
         ListNode* newNode = new ListNode(value); 
         if(head == NULL)
             return newNode; 
-        else{        
+        else {        
             ListNode* temp = head;
-            while(temp->next){
+            while(temp->next) {
                 temp = temp->next;
-            }   
-
+            }
             temp->next = newNode;
             return head;
         }
@@ -58,13 +48,23 @@ int main() {
     Solution s;
     ListNode* head = NULL;
     
-    head = s.insert_node(head, 1);
+    head = s.insert_node(head, 3);
     head = s.insert_node(head, 2);
     head = s.insert_node(head, 0);
-    head = s.insert_node(head, 4);
+    head = s.insert_node(head, -4);
+    
+    // Manually creating a cycle: pointing the last node (4) back to the second node (2)
+    ListNode* temp = head;
+    std::cout<<"List: ";
+    while(temp->next != NULL) {
+        std::cout << temp->val << " ";
+        temp = temp->next;
+    }
+    temp->next = head->next;  // Creates a cycle by pointing the last node to the second node
+    std::cout<<temp->val<<std::endl;
 
-    std::cout << "List: ";
-    s.printList(head);  // Now just prints the list
+    //std::cout << "List: ";
+    //s.printList(head);  // Now just prints the list
 
     std::cout << "Is Circle? ";
     if(s.hasCycle(head)) {
