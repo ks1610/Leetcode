@@ -81,6 +81,6 @@ int main(){
     int k = 2;
     head = new_solution.rotateRight(head, k);
 
-    std::cout << "Sorted linked list: " << new_solution.printList(head) << std::endl;
+    std::cout << "Rotated list: " << new_solution.printList(head) << std::endl;
 
 }
