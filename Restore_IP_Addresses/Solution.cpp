@@ -1,6 +1,9 @@
+#include <bits/stdc++.h>
+#include <string.h>
+
 class Solution {
 public:
-    vector<string> restoreIpAddresses(string s) {
+    std::vector<std::string> restoreIpAddresses(std::string s) {
       std::vector<std::string> ans;
       std::string k;
         
@@ -26,3 +29,28 @@ public:
       return ans;
     }
 };
+
+int main() {
+    std::cout<<"IP: 25525511135"<<std::endl;
+    Solution s1;
+    std::vector<std::string> ip1 = s1.restoreIpAddresses("25525511135");
+    for(auto x : ip1)
+        std::cout << x << std::endl;
+    std::cout<<std::endl;
+
+    std::cout<<"IP: 0000"<<std::endl;
+    Solution s2;
+    std::vector<std::string> ip2 = s2.restoreIpAddresses("0000");
+    for(auto x : ip2)
+        std::cout << x << std::endl;
+    std::cout<<std::endl;
+    
+    std::cout<<"IP: 101023"<<std::endl;
+    Solution s3;
+    std::vector<std::string> ip3 = s3.restoreIpAddresses("101023");
+    for(auto x : ip3)
+        std::cout << x << std::endl;
+    std::cout<<std::endl;
+    
+    return 0;
+}
