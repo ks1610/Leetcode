@@ -1,0 +1,24 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+class Solution {
+public:
+    bool isPowerOfTwo(int n) { 
+        if(n <= 0)
+            return false;
+        while(n % 2 == 0){
+            n/=2;
+        }
+        return n == 1;
+    }
+};
+
+int main() {
+    Solution s;
+    int n[3] = {1, 16, 3};
+    for(int i = 0; i < 3; i++){
+        std::cout<<n[i]<<" is power of two? "<<(s.isPowerOfTwo(n[i])? "true" : "false")<<std::endl;
+    }
+    return 0;
+}
