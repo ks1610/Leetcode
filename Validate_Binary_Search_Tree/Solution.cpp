@@ -26,6 +26,14 @@ public:
 };
 
 int main(){
+
+    // Construct the tree:
+    //       5
+    //      / \
+    //     1   4
+    //        / \
+    //       3   6
+    
     TreeNode* node = new TreeNode(5);
     node->left = new TreeNode(1);
     node->right = new TreeNode(4);
