@@ -12,16 +12,16 @@ struct TreeNode {
 class Solution {
 public:
     bool isSymmetric(TreeNode* root) {
-        return isVail(root->left, root->right);
+        return isVaild(root->left, root->right);
     }
-    bool isVail(TreeNode* node_1, TreeNode* node_2){
+    bool isVaild(TreeNode* node_1, TreeNode* node_2){
         if(node_1 == NULL && node_2 == NULL)
             return true;
         
         if(node_1 == NULL || node_2 == NULL)
             return false;
         
-        return node_1->val == node_2->val && isVail(node_1->left, node_2->right) && isVail(node_1->right, node_2->left);
+        return node_1->val == node_2->val && isVaild(node_1->left, node_2->right) && isVaild(node_1->right, node_2->left);
     }
 };
 
