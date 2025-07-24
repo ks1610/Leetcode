@@ -20,6 +20,14 @@ class Solution(object):
         return self.Possible(root, minval, maxval)
 
 # Test Case:
+
+# Construct the tree:
+#       5
+#      / \
+#     1   4
+#        / \
+#       3   6
+
 root = TreeNode(5)
 root.left = TreeNode(1)
 root.right = TreeNode(4)
