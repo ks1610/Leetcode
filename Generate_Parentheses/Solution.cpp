@@ -1,7 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <string>
-using namespace std;
+#include <bits/stdc++.h>
 
 class Solution {
 public:
@@ -29,14 +26,14 @@ int main() {
     Solution sol;
     int n;
 
-    cout << "Enter number of pairs of parentheses: ";
-    cin >> n;
+    std::cout << "Enter number of pairs of parentheses: ";
+    std::cin >> n;
 
-    vector<string> result = sol.generateParenthesis(n);
+    std::vector<std::string> result = sol.generateParenthesis(n);
 
-    cout << "Generated Parentheses combinations:\n";
+    std::cout << "Generated Parentheses combinations:\n";
     for (const string &s : result)
-        cout << s << endl;
+        std::cout << s << endl;
 
     return 0;
 }
